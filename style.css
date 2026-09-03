@@ -1688,3 +1688,132 @@ a.contact-detail-item:hover {
   .contact-form-card { padding: 24px 20px; }
   .hero-content { padding-top: 80px; }
 }
+
+/* =============================================
+   LANGUAGE SWITCHER
+   ============================================= */
+.lang-switcher {
+  position: relative;
+  margin-left: 8px;
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(184, 154, 106, 0.1);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 8px 14px;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.lang-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: var(--navy-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px;
+  min-width: 150px;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2000;
+}
+
+.lang-dropdown.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  text-align: left;
+  cursor: pointer;
+}
+
+.lang-option:hover {
+  background: rgba(184, 154, 106, 0.08);
+  color: var(--text-primary);
+}
+
+.lang-option.active {
+  color: var(--gold);
+  background: rgba(184, 154, 106, 0.1);
+}
+
+/* RTL Support for Arabic */
+html[dir="rtl"] .lang-dropdown {
+  right: auto;
+  left: 0;
+}
+
+html[dir="rtl"] .lang-option {
+  text-align: right;
+}
+
+html[dir="rtl"] .section-tag::before { display: none; }
+
+html[dir="rtl"] .section-tag::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+}
+
+html[dir="rtl"] .section-tag.light::after { background: var(--gold-light); }
+
+html[dir="rtl"] .hero-scroll-indicator {
+  right: auto;
+  left: 48px;
+}
+
+html[dir="rtl"] .about-badge-card {
+  right: auto;
+  left: -24px;
+}
+
+html[dir="rtl"] .about-experience-pill {
+  left: auto;
+  right: -16px;
+}
+
+html[dir="rtl"] .logo-text {
+  border-left: none;
+  border-right: 1px solid var(--border);
+  padding-left: 0;
+  padding-right: 12px;
+}
+
+html[dir="rtl"] .service-list li::before { content: '—'; }
+
+@media (max-width: 900px) {
+  .lang-switcher { margin-left: 0; }
+}

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YasminaHealth | Medical Tourism Consultant — Istanbul, Turkey</title>
-  <meta name="description" content="YasminaHealth provides expert medical tourism consulting in Istanbul, Turkey. We connect international patients with top-tier aesthetic and plastic surgery specialists for safe, personalized care." />
-  <meta name="keywords" content="medical tourism Istanbul, aesthetic surgery Turkey, YasminaHealth, plastic surgery consultation, health travel Istanbul" />
+  <title>YasminaHealth | UAE Registered Medical Tourism Agency — Surgeries in Istanbul</title>
+  <meta name="description" content="YasminaHealth is a UAE-registered medical tourism agency led by UAE-based consultant Yasmen Solibi. We connect GCC & international patients with elite aesthetic surgery specialists and JCI clinics in Istanbul, Turkey." />
+  <meta name="keywords" content="medical tourism UAE, Dubai medical tourism, aesthetic surgery Turkey, YasminaHealth, plastic surgery Istanbul, Yasmen Solibi" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -16,7 +16,7 @@
   <!-- Preloader -->
   <div id="preloader">
     <div class="preloader-content">
-      <div class="preloader-logo">Y<span>/</span>H</div>
+      <div class="preloader-logo">Y<span>/</span>S</div>
       <div class="preloader-bar"><div class="preloader-fill"></div></div>
     </div>
   </div>
@@ -25,16 +25,29 @@
   <nav id="navbar">
     <div class="nav-container">
       <a href="#home" class="nav-logo">
-        <span class="logo-initials">Y <span class="gold">/</span> H</span>
+        <span class="logo-initials">Y <span class="gold">/</span> S</span>
         <span class="logo-text">YasminaHealth</span>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#why" class="nav-link">Why Istanbul</a></li>
-        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-        <li><a href="#contact" class="nav-link nav-cta" id="ctaNavBtn">Free Consultation</a></li>
+        <li><a href="#about" class="nav-link" data-i18n="nav_about">About</a></li>
+        <li><a href="#services" class="nav-link" data-i18n="nav_services">Services</a></li>
+        <li><a href="#why" class="nav-link" data-i18n="nav_why">Why Istanbul</a></li>
+        <li><a href="#testimonials" class="nav-link" data-i18n="nav_testimonials">Testimonials</a></li>
+        <li><a href="#contact" class="nav-link nav-cta" id="ctaNavBtn" data-i18n="nav_cta">Free Consultation</a></li>
       </ul>
+      <!-- Language Switcher -->
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn" id="langBtn" aria-label="Change language">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span id="langCurrent">EN</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="lang-dropdown" id="langDropdown">
+          <button class="lang-option active" data-lang="en">🇬🇧 English</button>
+          <button class="lang-option" data-lang="ar">🇸🇦 العربية</button>
+          <button class="lang-option" data-lang="tr">🇹🇷 Türkçe</button>
+        </div>
+      </div>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -49,38 +62,38 @@
     <div class="hero-content">
       <div class="hero-badge">
         <span class="badge-dot"></span>
-        Medical Tourism Expert · Istanbul, Turkey
+        <span data-i18n="hero_badge">UAE Registered Agency · Surgeries in Istanbul, Turkey</span>
       </div>
-      <h1 class="hero-title">
-        Your Trusted Guide to<br/><em>World-Class Care</em><br/>
+      <h1 class="hero-title" data-i18n="hero_title_html">
+        Your Trusted UAE Guide to<br/><em>World-Class Care</em><br/>
         in Istanbul
       </h1>
-      <p class="hero-subtitle">
-        YasminaHealth bridges the gap between international patients and elite aesthetic &amp; medical specialists in Istanbul — delivering a seamless, safe, and personalised journey from start to finish.
+      <p class="hero-subtitle" data-i18n="hero_subtitle">
+        Headquartered &amp; registered in the UAE, YasminaHealth connects GCC &amp; global patients with elite aesthetic &amp; medical specialists in Istanbul — delivering a seamless, safe, and personalized journey from start to finish.
       </p>
       <div class="hero-actions">
         <a href="#contact" class="btn btn-primary" id="heroConsultBtn">
-          <span>Book Free Consultation</span>
+          <span data-i18n="hero_btn_consult">Book Free Consultation</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
         <a href="#services" class="btn btn-outline" id="heroServicesBtn">
-          <span>Explore Services</span>
+          <span data-i18n="hero_btn_services">Explore Services</span>
         </a>
       </div>
       <div class="hero-stats">
         <div class="stat">
           <span class="stat-number" data-target="500">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label">Patients Guided</span>
+          <span class="stat-label" data-i18n="stat_patients">Patients Guided</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
           <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label">Years Experience</span>
+          <span class="stat-label" data-i18n="stat_years">Years Experience</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
           <span class="stat-number" data-target="30">0</span><span class="stat-suffix">+</span>
-          <span class="stat-label">Countries Served</span>
+          <span class="stat-label" data-i18n="stat_countries">Countries Served</span>
         </div>
       </div>
     </div>
@@ -97,8 +110,8 @@
         <div class="about-image-col">
           <div class="about-image-wrapper">
             <div class="about-image-frame">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
-                   alt="Yasmen Solibi — Medical Tourism Consultant Istanbul"
+              <img src="images/yasi pp.jpeg"
+                   alt="Yasmen Solibi — UAE Medical Tourism Consultant for Istanbul Surgeries"
                    class="about-img" loading="lazy" />
             </div>
             <div class="about-badge-card">
@@ -115,41 +128,41 @@
           </div>
         </div>
         <div class="about-text-col">
-          <div class="section-tag">About Yasmen Solibi</div>
-          <h2 class="section-title">
+          <div class="section-tag" data-i18n="about_tag">About Yasmen Solibi</div>
+          <h2 class="section-title" data-i18n="about_title_html">
             An Expert Who Listens,<br/><em>A Guide Who Delivers</em>
           </h2>
-          <p class="about-lead">
-            Yasmen Solibi is a leading medical tourism consultant based in Istanbul, Turkey — one of the world’s top destinations for aesthetic and medical procedures.
+          <p class="about-lead" data-i18n="about_lead">
+            Yasmen Solibi is a UAE-based medical tourism consultant leading a UAE-registered healthcare agency that specializes in luxury medical travel and expert surgical placement in Istanbul, Turkey.
           </p>
-          <p class="about-body">
-            With over 5 years of experience connecting international patients to elite surgeons and clinics in Istanbul, Yasmen handles every detail of your medical journey. From clinic selection and surgeon matching to travel logistics, accommodation, and post-procedure aftercare — you’re never alone. Her hands-on, empathetic approach has earned her a reputation for trust and excellence across 30+ countries.
+          <p class="about-body" data-i18n="about_body">
+            Based in the UAE and working directly with top JCI-accredited hospitals and master surgeons in Istanbul, Yasmen handles every detail of your medical journey. From initial consultation in the UAE to VIP transport, luxury stay, surgical care, and aftercare in Istanbul — you’re never alone. Her hands-on, empathetic approach has earned her a reputation for trust and excellence across the UAE, GCC, and 30+ countries.
           </p>
           <div class="about-credentials">
             <div class="credential-item">
               <div class="cred-icon">🎓</div>
               <div class="cred-text">
-                <strong>Specialist Background</strong>
-                <span>Healthcare Management &amp; Medical Tourism</span>
+                <strong data-i18n="cred1_title">Specialist Background</strong>
+                <span data-i18n="cred1_sub">Healthcare Management &amp; Medical Tourism</span>
               </div>
             </div>
             <div class="credential-item">
               <div class="cred-icon">🏥</div>
               <div class="cred-text">
-                <strong>Based in Istanbul</strong>
-                <span>Istanbul, Turkey — Premium Clinic Network</span>
+                <strong data-i18n="cred2_title">UAE Registered Agency</strong>
+                <span data-i18n="cred2_sub">UAE Headquarters · Surgeries in Istanbul</span>
               </div>
             </div>
             <div class="credential-item">
               <div class="cred-icon">🌍</div>
               <div class="cred-text">
-                <strong>International Patients</strong>
-                <span>English, Turkish, Arabic &amp; French consultations</span>
+                <strong data-i18n="cred3_title">International Patients</strong>
+                <span data-i18n="cred3_sub">English, Turkish, Arabic &amp; French consultations</span>
               </div>
             </div>
           </div>
           <a href="#contact" class="btn btn-primary" id="aboutContactBtn">
-            <span>Schedule a Consultation</span>
+            <span data-i18n="about_cta">Schedule a Consultation</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -161,75 +174,75 @@
   <section id="procedures" class="procedures">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">Procedures</div>
-        <h2 class="section-title">Transformative Care Options</h2>
-        <p class="section-desc">We connect you with elite specialists in Istanbul for life-changing aesthetic and medical procedures.</p>
+        <div class="section-tag" data-i18n="proc_tag">Procedures</div>
+        <h2 class="section-title" data-i18n="proc_title">Transformative Care Options</h2>
+        <p class="section-desc" data-i18n="proc_desc">We connect you with elite specialists in Istanbul for life-changing aesthetic and medical procedures.</p>
       </div>
       <div class="procedures-grid">
         <!-- Procedure Card 1 -->
         <div class="proc-card" data-procedure="rhinoplasty">
           <div class="proc-img-box">
-            <img src="images/rhinoplasty_img_1787147162455.png" alt="Rhinoplasty" loading="lazy">
+            <img src="images/Perfect Rhinoplasty.jpg" alt="Rhinoplasty" loading="lazy">
           </div>
           <div class="proc-content">
-            <span class="proc-cat">Facial Aesthetics</span>
-            <h3 class="proc-title">Rhinoplasty</h3>
-            <span class="proc-btn">Details &rarr;</span>
+            <span class="proc-cat" data-i18n="proc_cat_facial">Facial Aesthetics</span>
+            <h3 class="proc-title" data-i18n="proc_rhino_title">Rhinoplasty</h3>
+            <span class="proc-btn" data-i18n="proc_details">Details &rarr;</span>
           </div>
         </div>
         <!-- Procedure Card 2 -->
         <div class="proc-card" data-procedure="facelift">
           <div class="proc-img-box">
-            <img src="images/facelift_img_1787147174060.png" alt="Face Lift" loading="lazy">
+            <img src="images/Perfect Facelift.webp" alt="Face Lift" loading="lazy">
           </div>
           <div class="proc-content">
-            <span class="proc-cat">Facial Aesthetics</span>
-            <h3 class="proc-title">Face Lift</h3>
-            <span class="proc-btn">Details &rarr;</span>
+            <span class="proc-cat" data-i18n="proc_cat_facial">Facial Aesthetics</span>
+            <h3 class="proc-title" data-i18n="proc_facelift_title">Face Lift</h3>
+            <span class="proc-btn" data-i18n="proc_details">Details &rarr;</span>
           </div>
         </div>
         <!-- Procedure Card 3 -->
         <div class="proc-card" data-procedure="breast-aug">
           <div class="proc-img-box">
-            <img src="images/breast_aug_img_1787147201673.png" alt="Breast Augmentation" loading="lazy">
+            <img src="images/Perfect Breast augmentation.jpg" alt="Breast Augmentation" loading="lazy">
           </div>
           <div class="proc-content">
-            <span class="proc-cat">Breast Procedures</span>
-            <h3 class="proc-title">Breast Augmentation</h3>
-            <span class="proc-btn">Details &rarr;</span>
+            <span class="proc-cat" data-i18n="proc_cat_breast">Breast Procedures</span>
+            <h3 class="proc-title" data-i18n="proc_breast_title">Breast Augmentation</h3>
+            <span class="proc-btn" data-i18n="proc_details">Details &rarr;</span>
           </div>
         </div>
         <!-- Procedure Card 4 -->
         <div class="proc-card" data-procedure="tummytuck">
           <div class="proc-img-box">
-            <img src="images/tummy_tuck_img_1787147252940.png" alt="Tummy Tuck" loading="lazy">
+            <img src="images/perfect tummy tuck.webp" alt="Tummy Tuck" loading="lazy">
           </div>
           <div class="proc-content">
-            <span class="proc-cat">Body Contouring</span>
-            <h3 class="proc-title">Tummy Tuck</h3>
-            <span class="proc-btn">Details &rarr;</span>
+            <span class="proc-cat" data-i18n="proc_cat_body">Body Contouring</span>
+            <h3 class="proc-title" data-i18n="proc_tummy_title">Tummy Tuck</h3>
+            <span class="proc-btn" data-i18n="proc_details">Details &rarr;</span>
           </div>
         </div>
         <!-- Procedure Card 5 -->
         <div class="proc-card" data-procedure="liposuction">
           <div class="proc-img-box">
-            <img src="images/liposuction_img_1787147271360.png" alt="Liposuction" loading="lazy">
+            <img src="images/perfect liposuction.webp" alt="Liposuction" loading="lazy">
           </div>
           <div class="proc-content">
-            <span class="proc-cat">Body Contouring</span>
-            <h3 class="proc-title">Liposuction</h3>
-            <span class="proc-btn">Details &rarr;</span>
+            <span class="proc-cat" data-i18n="proc_cat_body">Body Contouring</span>
+            <h3 class="proc-title" data-i18n="proc_lipo_title">Liposuction</h3>
+            <span class="proc-btn" data-i18n="proc_details">Details &rarr;</span>
           </div>
         </div>
         <!-- Procedure Card 6 -->
         <div class="proc-card" data-procedure="gastric-sleeve">
           <div class="proc-img-box">
-            <img src="images/gastric_sleeve_img_1787147283435.png" alt="Gastric Sleeve" loading="lazy">
+            <img src="images/perfect gastric_sleeve.png" alt="Gastric Sleeve" loading="lazy">
           </div>
           <div class="proc-content">
-            <span class="proc-cat">Bariatric Surgery</span>
-            <h3 class="proc-title">Gastric Sleeve</h3>
-            <span class="proc-btn">Details &rarr;</span>
+            <span class="proc-cat" data-i18n="proc_cat_bariatric">Bariatric Surgery</span>
+            <h3 class="proc-title" data-i18n="proc_gastric_title">Gastric Sleeve</h3>
+            <span class="proc-btn" data-i18n="proc_details">Details &rarr;</span>
           </div>
         </div>
       </div>
@@ -242,40 +255,40 @@
     <div class="container">
       <div class="why-grid">
         <div class="why-text-col">
-          <div class="section-tag light">Why Istanbul?</div>
-          <h2 class="section-title light">
+          <div class="section-tag light" data-i18n="why_tag">Why Istanbul?</div>
+          <h2 class="section-title light" data-i18n="why_title_html">
             World-Class Surgery at<br/><em>Remarkable Value</em>
           </h2>
-          <p class="why-lead">
+          <p class="why-lead" data-i18n="why_lead">
             Istanbul has become one of the world's top medical tourism destinations — combining European-standard care with costs significantly lower than Western Europe or the USA.
           </p>
           <div class="why-features">
             <div class="why-feature">
               <div class="why-feature-icon">&#128142;</div>
               <div class="why-feature-text">
-                <strong>Premium Quality</strong>
-                <p>JCI-accredited hospitals with the latest technology and internationally trained surgeons.</p>
+                <strong data-i18n="why_f1_title">Premium Quality</strong>
+                <p data-i18n="why_f1_desc">JCI-accredited hospitals with the latest technology and internationally trained surgeons.</p>
               </div>
             </div>
             <div class="why-feature">
               <div class="why-feature-icon">&#9992;&#65039;</div>
               <div class="why-feature-text">
-                <strong>Easy Travel Access</strong>
-                <p>Istanbul Airport serves 300+ destinations worldwide, with visa-on-arrival for many nationalities.</p>
+                <strong data-i18n="why_f2_title">Easy Travel Access</strong>
+                <p data-i18n="why_f2_desc">Istanbul Airport serves 300+ destinations worldwide, with visa-on-arrival for many nationalities.</p>
               </div>
             </div>
             <div class="why-feature">
               <div class="why-feature-icon">&#128176;</div>
               <div class="why-feature-text">
-                <strong>Cost Savings up to 70%</strong>
-                <p>Same high-quality procedures at a fraction of UK, US, or Western European prices.</p>
+                <strong data-i18n="why_f3_title">Cost Savings up to 70%</strong>
+                <p data-i18n="why_f3_desc">Same high-quality procedures at a fraction of UK, US, or Western European prices.</p>
               </div>
             </div>
             <div class="why-feature">
               <div class="why-feature-icon">&#129309;</div>
               <div class="why-feature-text">
-                <strong>Full Concierge Support</strong>
-                <p>Travel coordination, accommodation, and aftercare support for international patients.</p>
+                <strong data-i18n="why_f4_title">Full Concierge Support</strong>
+                <p data-i18n="why_f4_desc">Travel coordination, accommodation, and aftercare support for international patients.</p>
               </div>
             </div>
           </div>
@@ -301,8 +314,8 @@
   <section id="testimonials" class="testimonials">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">Patient Stories</div>
-        <h2 class="section-title">Words From Real Patients</h2>
+        <div class="section-tag" data-i18n="test_tag">Patient Stories</div>
+        <h2 class="section-title" data-i18n="test_title">Words From Real Patients</h2>
       </div>
       <div class="testimonials-slider" id="testimonialsSlider">
         <div class="testimonials-track" id="testimonialsTrack">
@@ -369,12 +382,12 @@
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info-col">
-          <div class="section-tag">Get in Touch</div>
-          <h2 class="section-title">
+          <div class="section-tag" data-i18n="contact_tag">Get in Touch</div>
+          <h2 class="section-title" data-i18n="contact_title_html">
             Start Your<br/><em>Transformation Journey</em>
           </h2>
-          <p class="contact-lead">
-            Book a free, no-obligation consultation with Yasmen. We'll discuss your goals, answer your questions, and design a personalized health travel plan — all in your language.
+          <p class="contact-lead" data-i18n="contact_lead">
+            Book a free, no-obligation consultation with Yasmen (UAE office or online). We'll discuss your goals, answer your questions, and design a personalized health travel plan — all in your language.
           </p>
           <div class="contact-details">
             <a href="https://wa.me/905XXXXXXXXX" class="contact-detail-item" id="waBtn">
@@ -382,8 +395,8 @@
                 <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               </div>
               <div class="detail-text">
-                <strong>WhatsApp</strong>
-                <span>Message us instantly for a quick reply</span>
+                <strong data-i18n="contact_wa_title">WhatsApp</strong>
+                <span data-i18n="contact_wa_sub">Message us instantly for a quick reply</span>
               </div>
             </a>
             <a href="mailto:info@yasminahealth.com" class="contact-detail-item" id="emailBtn">
@@ -400,8 +413,8 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               </div>
               <div class="detail-text">
-                <strong>Location</strong>
-                <span>Istanbul, Turkey — Şişli District</span>
+                <strong data-i18n="contact_loc_title">Headquarters &amp; Surgeries</strong>
+                <span data-i18n="contact_loc_sub">UAE Registered Agency (HQ) | Operations: Istanbul, Turkey</span>
               </div>
             </div>
           </div>
@@ -416,17 +429,17 @@
         </div>
         <div class="contact-form-col">
           <div class="contact-form-card">
-            <h3>Request a Free Consultation</h3>
-            <p>Fill in your details and Yasmen will get back to you within 24 hours.</p>
+            <h3 data-i18n="form_title">Request a Free Consultation</h3>
+            <p data-i18n="form_subtitle">Fill in your details and Yasmen will get back to you within 24 hours.</p>
             <form id="contactForm" class="contact-form" novalidate>
               <div class="form-row">
                 <div class="form-group">
-                  <label for="firstName">First Name *</label>
-                  <input type="text" id="firstName" name="firstName" placeholder="Your first name" required />
+                  <label for="firstName" data-i18n="form_fname">First Name *</label>
+                  <input type="text" id="firstName" name="firstName" placeholder="Your first name" data-i18n-placeholder="form_fname_ph" required />
                 </div>
                 <div class="form-group">
-                  <label for="lastName">Last Name *</label>
-                  <input type="text" id="lastName" name="lastName" placeholder="Your last name" required />
+                  <label for="lastName" data-i18n="form_lname">Last Name *</label>
+                  <input type="text" id="lastName" name="lastName" placeholder="Your last name" data-i18n-placeholder="form_lname_ph" required />
                 </div>
               </div>
               <div class="form-group">
@@ -474,15 +487,15 @@
                 <textarea id="message" name="message" rows="4" placeholder="Tell us about your goals or any questions you have..."></textarea>
               </div>
               <button type="submit" class="btn btn-primary btn-full" id="submitFormBtn">
-                <span>Send Consultation Request</span>
+                <span data-i18n="form_submit">Send Consultation Request</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
               </button>
               <p class="form-note">&#128274; Your information is 100% private and confidential.</p>
             </form>
             <div id="formSuccess" class="form-success hidden">
               <div class="success-icon">&#10003;</div>
-              <h4>Message Received!</h4>
-              <p>Thank you for reaching out. Yasmen's team will contact you within 24 hours.</p>
+              <h4 data-i18n="form_success_title">Message Received!</h4>
+              <p data-i18n="form_success_sub">Thank you for reaching out. Yasmen's team will contact you within 24 hours.</p>
             </div>
           </div>
         </div>
@@ -495,9 +508,9 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <div class="footer-logo">Y <span class="gold">/</span> H</div>
-          <p>YasminaHealth<br/>Medical Tourism Consultant</p>
-          <p class="footer-tagline">Your Bridge to World-Class Care in Istanbul.</p>
+          <div class="footer-logo">Y <span class="gold">/</span> S</div>
+          <p>YasminaHealth<br/>Medical Tourism Agency</p>
+          <p class="footer-tagline" data-i18n="footer_tagline">UAE-Registered Agency · Premier Care in Istanbul.</p>
         </div>
         <div class="footer-links-col">
           <h4>Services</h4>
@@ -518,17 +531,18 @@
           </ul>
         </div>
         <div class="footer-links-col">
-          <h4>Contact</h4>
+          <h4 data-i18n="footer_contact_header">Contact &amp; Locations</h4>
           <ul>
             <li><a href="https://www.yasminahealth.com">yasminahealth.com</a></li>
             <li><a href="https://www.instagram.com/yasminahealth?igsh=MWZ1YzRpMDgyYTluNA==">@yasminahealth</a></li>
-            <li><span>Istanbul, Turkey</span></li>
+            <li><span data-i18n="footer_hq">HQ: United Arab Emirates (UAE)</span></li>
+            <li><span data-i18n="footer_ops">Surgeries: Istanbul, Turkey</span></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 YasminaHealth. All rights reserved.</p>
-        <p class="footer-disclaimer">YasminaHealth is a medical tourism agency. All surgical procedures are performed by certified specialists in accredited clinics. Results may vary.</p>
+        <p data-i18n="footer_copy">&copy; 2025 YasminaHealth. All rights reserved. Registered Medical Tourism Agency in the United Arab Emirates (UAE).</p>
+        <p class="footer-disclaimer" data-i18n="footer_disclaimer">YasminaHealth is a UAE-registered medical tourism agency. All surgical procedures are performed by certified specialists in accredited clinics in Istanbul, Turkey. Results may vary.</p>
       </div>
     </div>
   </footer>
@@ -548,7 +562,7 @@
           <div id="modalDesc" class="modal-desc">
             <!-- Content injected via JS -->
           </div>
-          <a href="#contact" class="btn btn-primary" id="modalCta">Request Consultation</a>
+          <a href="#contact" class="btn btn-primary" id="modalCta" data-i18n="modal_cta">Request Consultation</a>
         </div>
       </div>
     </div>

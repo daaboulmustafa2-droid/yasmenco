@@ -1,11 +1,11 @@
 {
   "name": "yasminahealth-landing",
   "version": "1.0.0",
-  "description": "Landing page for YasminaHealth — Medical Tourism Consultant, Istanbul",
+  "description": "Landing page for YasminaHealth — UAE Registered Medical Tourism Agency, Surgeries in Istanbul",
   "scripts": {
     "dev": "npx serve . -l 3000 --no-clipboard",
     "start": "npx serve . -l 3000 --no-clipboard"
   },
-  "keywords": ["medical", "istanbul", "aesthetic", "surgery", "consultant"],
+  "keywords": ["medical tourism", "uae", "dubai", "istanbul", "aesthetic surgery", "yasmen solibi"],
   "author": "YasminaHealth"
 }
