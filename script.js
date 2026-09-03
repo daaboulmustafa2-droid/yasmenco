@@ -214,36 +214,70 @@ window.addEventListener('load', updateSlider);
 updateSlider();
 
 // =============================================
-// CONTACT FORM
+// CONTACT FORM & GOOGLE SHEETS LEADS INTEGRATION
 // =============================================
+// Paste your Google Apps Script Web App URL below after completing setup:
+const GOOGLE_SHEET_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyvUQR6WpxAOcOnp1DNg1etr65bwlMbCxlPW5_9AkIzrcikMYTng5bit1VuO9Ccnh9jOA/exec';
+
 const contactForm = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
 
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
     const emailVal = document.getElementById('email').value.trim();
+    const phoneVal = document.getElementById('phone')?.value.trim() || '';
+    const procedureVal = document.getElementById('procedure')?.value || '';
+    const messageVal = document.getElementById('message')?.value.trim() || '';
 
-    if (!firstName || !emailVal) {
-      // Basic validation shake
-      contactForm.querySelectorAll('input:invalid, input:placeholder-shown[required]').forEach(input => {
+    if (!firstName || !lastName || !emailVal) {
+      contactForm.querySelectorAll('input:invalid, input[required]:placeholder-shown').forEach(input => {
         input.style.borderColor = '#e05252';
-        setTimeout(() => input.style.borderColor = '', 2000);
+        setTimeout(() => input.style.borderColor = '', 2500);
       });
       return;
     }
 
-    // Simulate form submission
     const submitBtn = document.getElementById('submitFormBtn');
     submitBtn.innerHTML = '<span>Sending...</span>';
     submitBtn.disabled = true;
 
-    setTimeout(() => {
-      contactForm.classList.add('hidden');
-      formSuccess.classList.remove('hidden');
-    }, 1500);
+    const leadData = {
+      timestamp: new Date().toLocaleString('en-US', { timeZoneName: 'short' }),
+      firstName,
+      lastName,
+      email: emailVal,
+      phone: phoneVal,
+      procedure: procedureVal,
+      message: messageVal
+    };
+
+    if (GOOGLE_SHEET_SCRIPT_URL && GOOGLE_SHEET_SCRIPT_URL.trim() !== '') {
+      try {
+        await fetch(GOOGLE_SHEET_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(leadData)
+        });
+
+        contactForm.classList.add('hidden');
+        formSuccess.classList.remove('hidden');
+      } catch (err) {
+        console.error('Error submitting form:', err);
+        contactForm.classList.add('hidden');
+        formSuccess.classList.remove('hidden');
+      }
+    } else {
+      // Demo delay if URL is not configured yet
+      setTimeout(() => {
+        contactForm.classList.add('hidden');
+        formSuccess.classList.remove('hidden');
+      }, 1200);
+    }
   });
 }
 
