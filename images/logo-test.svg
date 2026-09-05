@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <!-- Brand Dusty Rose Fill -->
+  <g fill="#D69F94">
+    <!-- Left Half (Circle with y Monogram Cutout) -->
+    <path d="
+      M 244 40.3
+      A 100 100 0 0 0 144 240
+      L 182 240
+      C 172 215 168 190 178 165
+      C 188 140 210 128 244 128
+      L 244 40.3 Z
+
+      M 244 148
+      C 220 148 202 160 196 182
+      C 190 204 196 225 212 238
+      L 244 238
+      L 244 148 Z
+    " />
+
+    <!-- Simplified Pixel-Perfect Monogram Icon Paths -->
+    <!-- Left Semi-Circle with Y cutout -->
+    <path d="
+      M 244,40
+      A 100,100 0 0,0 144,140
+      A 100,100 0 0,0 244,240
+      L 244,195
+      C 215,195 200,180 200,155
+      C 200,130 215,115 244,115
+      L 244,40 Z
+    " fill-rule="evenodd"/>
+
+    <!-- Right Semi-Circle with H cutout -->
+    <path d="
+      M 256,40
+      L 256,240
+      A 100,100 0 0,0 356,140
+      A 100,100 0 0,0 256,40 Z
+      M 285,90
+      L 310,90
+      C 328,90 338,102 338,122
+      L 338,190
+      L 315,190
+      L 315,130
+      C 315,115 308,108 296,108
+      L 285,108
+      L 285,190
+      L 256,190
+      L 256,90
+      Z
+    " fill-rule="evenodd"/>
+  </g>
+</svg>

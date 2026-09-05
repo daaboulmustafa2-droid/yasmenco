@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <g fill="#D39E94">
+    <!-- LEFT HALF OF CIRCLE WITH Y CUTOUT -->
+    <path fill-rule="evenodd" d="
+      M 242 50
+      A 200 200 0 0 0 242 450
+      L 242 50 Z
+
+      M 115 115
+      C 150 150 195 190 242 215
+      L 242 245
+      C 185 220 140 175 100 130
+      Z
+
+      M 242 260
+      C 195 285 150 325 115 385
+      L 100 370
+      C 140 310 185 270 242 240
+      Z
+    " />
+
+    <!-- RIGHT HALF OF CIRCLE WITH H ARCH CUTOUT -->
+    <path fill-rule="evenodd" d="
+      M 258 50
+      L 258 450
+      A 200 200 0 0 0 258 50 Z
+
+      M 258 230
+      C 290 170 345 130 395 130
+      C 420 130 435 145 435 170
+      L 435 395
+      L 405 395
+      L 405 175
+      C 405 160 395 152 380 152
+      C 340 152 290 188 258 255
+      Z
+    " />
+  </g>
+</svg>

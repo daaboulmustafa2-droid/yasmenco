@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 580" width="100%" height="100%">
+  <g fill="#D39E94">
+    <!-- LEFT HALF OF CIRCLE -->
+    <path fill-rule="evenodd" d="
+      M 242 40
+      A 170 170 0 0 0 242 380
+      L 242 40 Z
+
+      M 134 95
+      C 164 125 202 159 242 181
+      L 242 206
+      C 193 184 155 146 121 108
+      Z
+
+      M 242 219
+      C 202 240 164 274 134 325
+      L 121 312
+      C 155 261 193 227 242 202
+      Z
+    " />
+
+    <!-- RIGHT HALF OF CIRCLE -->
+    <path fill-rule="evenodd" d="
+      M 258 40
+      L 258 380
+      A 170 170 0 0 0 258 40 Z
+
+      M 258 193
+      C 285 142 332 108 375 108
+      C 396 108 409 121 409 142
+      L 409 333
+      L 383 333
+      L 383 146
+      C 383 133 374 127 361 127
+      C 327 127 285 157 258 214
+      Z
+    " />
+
+    <!-- YASMINA TYPOGRAPHY -->
+    <text x="250" y="455" font-family="'Inter', -apple-system, sans-serif" font-size="34" font-weight="500" letter-spacing="9" text-anchor="middle">YASMINA</text>
+    
+    <!-- HEALTH TYPOGRAPHY -->
+    <text x="250" y="492" font-family="'Inter', -apple-system, sans-serif" font-size="14" font-weight="400" letter-spacing="14" text-anchor="middle">H E A L T H</text>
+  </g>
+</svg>

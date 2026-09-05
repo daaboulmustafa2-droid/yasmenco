@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <!-- Background transparent -->
+  <g fill="#D39E94">
+    <!-- LEFT HALF (x <= 242) -->
+    <!-- Top-left outer segment & inner stem -->
+    <path d="
+      M 242,50
+      A 200,200 0 0,0 66,170
+      C 105,170 145,185 175,215
+      C 195,235 210,250 242,250
+      L 242,50 Z
+    " />
+
+    <!-- Bottom-left outer segment & inner stem -->
+    <path d="
+      M 242,275
+      C 205,275 180,290 155,315
+      C 120,350 90,380 66,330
+      A 200,200 0 0,0 242,450
+      L 242,275 Z
+    " />
+
+    <!-- RIGHT HALF (x >= 258) -->
+    <!-- Top-right segment above the h arch -->
+    <path d="
+      M 258,50
+      L 258,450
+      A 200,200 0 0,0 434,330
+      L 434,250
+      C 434,180 375,130 305,130
+      C 285,130 270,138 258,150
+      L 258,50 Z
+    " />
+    
+    <!-- Inside arch piece of h -->
+    <path d="
+      M 258,190
+      C 270,175 285,168 305,168
+      C 350,168 396,200 396,260
+      L 396,400
+      A 200,200 0 0,0 422,365
+      L 422,260
+      C 422,185 365,138 305,138
+      C 285,138 270,148 258,162
+      L 258,190 Z
+    " opacity="0"/>
+  </g>
+</svg>

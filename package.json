@@ -6,6 +6,16 @@
     "dev": "npx serve . -l 3000 --no-clipboard",
     "start": "npx serve . -l 3000 --no-clipboard"
   },
-  "keywords": ["medical tourism", "uae", "dubai", "istanbul", "aesthetic surgery", "yasmen solibi"],
-  "author": "YasminaHealth"
+  "keywords": [
+    "medical tourism",
+    "uae",
+    "dubai",
+    "istanbul",
+    "aesthetic surgery",
+    "yasmen solibi"
+  ],
+  "author": "YasminaHealth",
+  "dependencies": {
+    "sharp": "^0.35.4"
+  }
 }
