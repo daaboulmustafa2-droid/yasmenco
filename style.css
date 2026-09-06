@@ -1,26 +1,81 @@
 /* =============================================
-   ROOT & DESIGN TOKENS
+   ROOT & DESIGN TOKENS — LIGHT MODE (DEFAULT)
    ============================================= */
 :root {
-  --gold: #D69F94;
-  --gold-light: #E8B8AE;
-  --gold-dark: #B87B70;
-  --navy: #0e0c10;
-  --navy-mid: #151218;
-  --navy-light: #1f1b24;
-  --navy-card: #19151e;
-  --text-primary: #f4edea;
-  --text-secondary: #b5a9a5;
-  --text-muted: #7d726e;
+  /* Brand accent palette */
+  --gold: #C4756A;
+  --gold-light: #E8A89C;
+  --gold-dark: #A05548;
+
+  /* Backgrounds — warm light */
+  --navy: #FDF8F6;
+  --navy-mid: #F5EDE9;
+  --navy-light: #FCEEE9;
+  --navy-card: #FFFFFF;
+
+  /* Text */
+  --text-primary: #1A1017;
+  --text-secondary: #5C4A47;
+  --text-muted: #9E857F;
   --white: #ffffff;
-  --border: rgba(214, 159, 148, 0.22);
-  --border-light: rgba(255, 255, 255, 0.07);
-  --shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-  --shadow-gold: 0 8px 32px rgba(214, 159, 148, 0.25);
+
+  /* Borders & shadows */
+  --border: rgba(164, 85, 72, 0.22);
+  --border-light: rgba(164, 85, 72, 0.10);
+  --shadow: 0 20px 60px rgba(164, 85, 72, 0.15);
+  --shadow-gold: 0 8px 32px rgba(196, 117, 106, 0.30);
+
+  /* Radii & easing */
   --radius: 16px;
   --radius-sm: 8px;
   --radius-lg: 24px;
   --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Light-mode specific helpers */
+  --hero-overlay-start: rgba(20, 8, 5, 0.78);
+  --hero-overlay-end:   rgba(20, 8, 5, 0.45);
+  --nav-scrolled-bg:    rgba(253, 248, 246, 0.96);
+  --why-bg-start: #FFF4F0;
+  --why-bg-end:   #FDE8E2;
+  --footer-bg:    #F0E0DA;
+  --mobile-menu-bg: rgba(253, 248, 246, 0.98);
+  --form-focus-bg: rgba(252, 238, 233, 0.8);
+  --preloader-bg: var(--navy);
+}
+
+/* =============================================
+   DARK MODE OVERRIDES
+   Apply by toggling class "dark-mode" on <body>
+   ============================================= */
+body.dark-mode {
+  --gold: #D69F94;
+  --gold-light: #E8B8AE;
+  --gold-dark: #B87B70;
+
+  --navy: #0e0c10;
+  --navy-mid: #151218;
+  --navy-light: #1f1b24;
+  --navy-card: #19151e;
+
+  --text-primary: #f4edea;
+  --text-secondary: #b5a9a5;
+  --text-muted: #7d726e;
+  --white: #ffffff;
+
+  --border: rgba(214, 159, 148, 0.22);
+  --border-light: rgba(255, 255, 255, 0.07);
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  --shadow-gold: 0 8px 32px rgba(214, 159, 148, 0.25);
+
+  --hero-overlay-start: rgba(10, 14, 26, 0.92);
+  --hero-overlay-end:   rgba(10, 14, 26, 0.50);
+  --nav-scrolled-bg:    rgba(14, 12, 16, 0.95);
+  --why-bg-start: #0d1220;
+  --why-bg-end:   #111827;
+  --footer-bg:    #060a14;
+  --mobile-menu-bg: rgba(10, 14, 26, 0.98);
+  --form-focus-bg: rgba(26, 34, 54, 0.8);
+  --preloader-bg: #0e0c10;
 }
 
 /* =============================================
@@ -60,7 +115,7 @@ button { cursor: pointer; font-family: inherit; }
 #preloader {
   position: fixed;
   inset: 0;
-  background: var(--navy);
+  background: var(--preloader-bg);
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -127,7 +182,7 @@ button { cursor: pointer; font-family: inherit; }
 }
 
 #navbar.scrolled {
-  background: rgba(14, 12, 16, 0.95);
+  background: var(--nav-scrolled-bg);
   backdrop-filter: blur(20px);
   padding: 14px 0;
   border-bottom: 1px solid var(--border);
@@ -363,9 +418,9 @@ button { cursor: pointer; font-family: inherit; }
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(10, 14, 26, 0.92) 0%,
-    rgba(10, 14, 26, 0.75) 50%,
-    rgba(10, 14, 26, 0.5) 100%
+    var(--hero-overlay-start) 0%,
+    rgba(20, 8, 5, 0.60) 50%,
+    var(--hero-overlay-end) 100%
   );
 }
 
@@ -834,14 +889,14 @@ button { cursor: pointer; font-family: inherit; }
 .why-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #0d1220 0%, #111827 50%, #0a1020 100%);
+  background: linear-gradient(135deg, var(--why-bg-start) 0%, var(--why-bg-end) 50%, var(--why-bg-start) 100%);
 }
 
 .why-bg::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 70% 50%, rgba(214, 159, 148, 0.07) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 70% 50%, rgba(196, 117, 106, 0.10) 0%, transparent 60%);
 }
 
 .why-grid {
@@ -1244,8 +1299,8 @@ a.contact-detail-item:hover {
 .form-group select:focus,
 .form-group textarea:focus {
   border-color: var(--gold);
-  background: rgba(26, 34, 54, 0.8);
-  box-shadow: 0 0 0 3px rgba(214, 159, 148, 0.1);
+  background: var(--form-focus-bg);
+  box-shadow: 0 0 0 3px rgba(196, 117, 106, 0.15);
 }
 
 .form-group select option {
@@ -1294,7 +1349,7 @@ a.contact-detail-item:hover {
    FOOTER
    ============================================= */
 .footer {
-  background: #060a14;
+  background: var(--footer-bg);
   border-top: 1px solid var(--border-light);
   padding: 80px 0 40px;
 }
@@ -1663,7 +1718,7 @@ a.contact-detail-item:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(10, 14, 26, 0.98);
+    background: var(--mobile-menu-bg);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -1878,5 +1933,83 @@ html[dir="rtl"] .service-list li::before { content: '—'; }
 html[dir="rtl"] .floating-whatsapp {
   right: auto;
   left: 28px;
+}
+
+/* =============================================
+   DARK MODE TOGGLE BUTTON
+   ============================================= */
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(196, 117, 106, 0.10);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition);
+  margin-left: 8px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.dark-mode-toggle:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(196, 117, 106, 0.15);
+  transform: rotate(15deg) scale(1.08);
+}
+
+.dark-mode-toggle .icon-sun,
+.dark-mode-toggle .icon-moon {
+  position: absolute;
+  transition: opacity 0.3s ease, transform 0.4s ease;
+}
+
+/* Light mode: show sun, hide moon */
+.dark-mode-toggle .icon-sun  { opacity: 1; transform: rotate(0deg) scale(1); }
+.dark-mode-toggle .icon-moon { opacity: 0; transform: rotate(90deg) scale(0.6); }
+
+/* Dark mode: hide sun, show moon */
+body.dark-mode .dark-mode-toggle .icon-sun  { opacity: 0; transform: rotate(-90deg) scale(0.6); }
+body.dark-mode .dark-mode-toggle .icon-moon { opacity: 1; transform: rotate(0deg) scale(1); }
+
+/* Light mode — why-istanbul section text contrast */
+body:not(.dark-mode) .why-lead {
+  color: rgba(26, 16, 12, 0.82);
+}
+body:not(.dark-mode) .why-feature-text p {
+  color: var(--text-secondary);
+}
+body:not(.dark-mode) .section-title.light {
+  color: #1A1017;
+}
+body:not(.dark-mode) .section-tag.light {
+  color: var(--gold-dark);
+}
+body:not(.dark-mode) .section-tag.light::before {
+  background: var(--gold-dark);
+}
+body:not(.dark-mode) .why-feature-text strong {
+  color: #1A1017;
+}
+body:not(.dark-mode) .ic-label {
+  color: rgba(26, 16, 12, 0.80);
+}
+body:not(.dark-mode) .ic-number {
+  color: var(--gold-dark);
+}
+body:not(.dark-mode) .istanbul-card-overlay {
+  background: linear-gradient(to top, rgba(253, 240, 235, 0.96) 0%, transparent 100%);
+}
+
+/* Preloader in dark-mode keeps its dark bg */
+body.dark-mode #preloader { background: #0e0c10; }
+
+@media (max-width: 900px) {
+  .dark-mode-toggle { margin-left: 0; }
 }
 

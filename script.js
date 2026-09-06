@@ -45,6 +45,31 @@ navLinks.querySelectorAll('.nav-link').forEach(link => {
 });
 
 // =============================================
+// DARK MODE TOGGLE
+// =============================================
+(function () {
+  const btn = document.getElementById('darkModeToggle');
+  const body = document.body;
+
+  // Apply saved preference immediately (before first paint)
+  const saved = localStorage.getItem('yasminaTheme');
+  if (saved === 'dark') {
+    body.classList.add('dark-mode');
+  }
+
+  if (btn) {
+    btn.addEventListener('click', () => {
+      const isDark = body.classList.toggle('dark-mode');
+      localStorage.setItem('yasminaTheme', isDark ? 'dark' : 'light');
+      btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+    });
+    // Set initial aria state
+    btn.setAttribute('aria-pressed', body.classList.contains('dark-mode') ? 'true' : 'false');
+  }
+})();
+
+
+// =============================================
 // SMOOTH SCROLL
 // =============================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
