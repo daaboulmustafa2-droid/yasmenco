@@ -188,6 +188,44 @@ button { cursor: pointer; font-family: inherit; }
   border-bottom: 1px solid var(--border);
 }
 
+/* ── Light mode: white text on transparent hero navbar ── */
+body:not(.dark-mode) #navbar:not(.scrolled) .nav-link {
+  color: rgba(255, 255, 255, 0.88);
+}
+body:not(.dark-mode) #navbar:not(.scrolled) .nav-link:hover {
+  color: #ffffff;
+}
+body:not(.dark-mode) #navbar:not(.scrolled) .nav-cta {
+  color: var(--navy) !important;
+}
+body:not(.dark-mode) #navbar:not(.scrolled) .nav-logo-title {
+  color: #ffffff;
+}
+body:not(.dark-mode) #navbar:not(.scrolled) .nav-logo-sub {
+  color: var(--gold-light);
+}
+body:not(.dark-mode) #navbar:not(.scrolled) .dark-mode-toggle {
+  color: rgba(255, 255, 255, 0.80);
+  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.10);
+}
+body:not(.dark-mode) #navbar:not(.scrolled) .dark-mode-toggle:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.55);
+}
+body:not(.dark-mode) #navbar:not(.scrolled) .lang-btn {
+  color: rgba(255, 255, 255, 0.80);
+  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.10);
+}
+body:not(.dark-mode) #navbar:not(.scrolled) .lang-btn:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.55);
+}
+body:not(.dark-mode) #navbar:not(.scrolled) .hamburger span {
+  background: #ffffff;
+}
+
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
